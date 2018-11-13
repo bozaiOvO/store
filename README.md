@@ -42,3 +42,12 @@ git是分布是版本控制工具，能够与gitHub配合达到管理代码与�
 ### 还有就是和github绑定，github如何知道你有这个权限上传到某仓库呢？
 + 1、每一次都输入github账户密码，以验证你的权限（相当麻烦）
 + 2、绑定SSH，这样就可以让github知道你这个电脑拥有上传这个github的权限。
+
+## 如何绑定ssh
++ git config --global user.name "yourname"设置名字
++ git config --global user.email“your@email.com" 设置邮箱 这两个和github毫无关系。
++ 删除C盘user下的.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）
++  ssh-keygen -t rsa -C "your@email.com"（请填你设置的邮箱地址）
++ 出现的东西 按回车
++ C盘 user下生成.ssh，进去，id_rsa和id_rsa.pub，用记事本打开id_rsa.pub，复制内容到github的设置里面的ssh，即可。！
+
